@@ -1,5 +1,5 @@
 # general settings
-name: train_SRFormer_SRx4_scratch_inkaggle
+name: train_SRFormer_SRx4_scratch_20231120
 model_type: SwinIRModel
 scale: 4
 num_gpu: auto
@@ -11,7 +11,7 @@ datasets:
     name: DIV2K
     type: PairedImageDataset
     dataroot_gt: datasets/MRI/Train/HR
-    dataroot_lq: datasets/MRI/Train/LR
+    dataroot_lq: datasets/MRI/Train/LR_INTER_AREA
     filename_tmpl: '{}'
     io_backend:
       type: disk
@@ -27,13 +27,28 @@ datasets:
 
 
   val_1:
-    name: Set5
+    name: NN
     type: PairedImageDataset
     dataroot_gt: datasets/MRI/Validation/HR
     dataroot_lq: datasets/MRI/Validation/LR
     io_backend:
       type: disk
 
+  val_2:
+    name: AREA
+    type: PairedImageDataset
+    dataroot_gt: datasets/MRI/Validation/HR
+    dataroot_lq: datasets/MRI/Validation/LR_INTER_AREA
+    io_backend:
+      type: disk
+
+  val_3:
+    name: TRAIN
+    type: PairedImageDataset
+    dataroot_gt: datasets/MRI/Train/HR
+    dataroot_lq: datasets/MRI/Train/LR_INTER_AREA
+    io_backend:
+      type: disk
 
 # network structures
 network_g:
@@ -66,7 +81,7 @@ train:
 
   scheduler:
     type: MultiStepLR
-    milestones: [25000, 40000, 45000, 47500]
+    milestones: [10000, 20000, 30000, 40000, 45000]
     gamma: 0.5
 
   total_iter: 50000
@@ -81,7 +96,7 @@ train:
 # validation settings
 val:
   val_freq: !!float 5e3
-  save_img: false
+  save_img: true
 
   metrics:
     psnr: # metric name, can be arbitrary
