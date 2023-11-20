@@ -1,5 +1,5 @@
 # general settings
-name: train_SRFormer_SRx4_scratch_20231120
+name: train_SRFormer_SRx4_scratch_20231120_1-1
 model_type: SwinIRModel
 scale: 4
 num_gpu: auto
@@ -20,8 +20,8 @@ datasets:
     use_rot: true
 
     use_shuffle: true
-    num_worker_per_gpu: 8
-    batch_size_per_gpu: 8
+    num_worker_per_gpu: 16
+    batch_size_per_gpu: 1
     dataset_enlarge_ratio: 1
     prefetch_mode: ~
 
