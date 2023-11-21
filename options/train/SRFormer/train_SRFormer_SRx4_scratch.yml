@@ -53,8 +53,8 @@ datasets:
   val_4:
     name: CUBIC
     type: PairedImageDataset
-    dataroot_gt: datasets/MRI/Train/HR
-    dataroot_lq: datasets/MRI/Train/LR_CUBIC
+    dataroot_gt: datasets/MRI/Validation/HR
+    dataroot_lq: datasets/MRI/Validation/LR_CUBIC
     io_backend:
       type: disk
 
