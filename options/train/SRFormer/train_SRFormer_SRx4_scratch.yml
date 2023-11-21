@@ -45,8 +45,8 @@ datasets:
   val_3:
     name: LINEAR
     type: PairedImageDataset
-    dataroot_gt: datasets/MRI/Train/HR
-    dataroot_lq: datasets/MRI/Train/LR_LINEAR
+    dataroot_gt: datasets/MRI/Validation/HR
+    dataroot_lq: datasets/MRI/Validation/LR_LINEAR
     io_backend:
       type: disk
 
