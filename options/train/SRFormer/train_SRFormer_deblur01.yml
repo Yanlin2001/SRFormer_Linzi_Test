@@ -19,8 +19,8 @@ datasets:
 #      type: disk
     name: DIV2K
     type: PairedImageDataset
-    dataroot_gt: /kaggle/input/div2k-bw-forblur-20231125/DIV2K_train_HR_BW/DIV2K_train_HR_BW
-    dataroot_lq: /kaggle/input/div2k-bw-forblur-20231125/DIV2K_train_HR_BW/DIV2K_train_HR_BW_blurred
+    dataroot_gt: /kaggle/input/sub-div2k-blur/SUB/DIV2K_train_HR_BW
+    dataroot_lq: /kaggle/input/sub-div2k-blur/SUB/DIV2K_train_HR_BW_blurred
     # (for lmdb)
     # dataroot_gt: datasets/DIV2K/DIV2K_train_HR_sub.lmdb
     # dataroot_lq: datasets/DIV2K/DIV2K_train_LR_bicubic_X2_sub.lmdb
@@ -44,8 +44,8 @@ datasets:
   val_1:
     name: Set5
     type: PairedImageDataset
-    dataroot_gt: /kaggle/input/div2k-bw-forblur-20231125/DIV2K_valid_HR_BW/DIV2K_valid_HR_BW
-    dataroot_lq: /kaggle/input/div2k-bw-forblur-20231125/DIV2K_valid_HR_BW/DIV2K_valid_HR_BW_blurred
+    dataroot_gt: /kaggle/input/sub-div2k-blur/SUB/DIV2K_valid_HR_BW
+    dataroot_lq: /kaggle/input/sub-div2k-blur/SUB/DIV2K_valid_HR_BW_blurred
     io_backend:
       type: disk
 
