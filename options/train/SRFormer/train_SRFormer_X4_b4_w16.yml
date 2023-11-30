@@ -1,5 +1,5 @@
 # general settings
-name: train_SRFormer_X4_b8_w16
+name: train_SRFormer_X4_b4_w16
 model_type: SwinIRModel
 scale: 4
 num_gpu: auto
