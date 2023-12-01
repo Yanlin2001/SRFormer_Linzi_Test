@@ -27,7 +27,7 @@ datasets:
 
 
   val_1:
-    name: NN
+    name: AREA
     type: PairedImageDataset
     dataroot_gt: datasets/MRI/GT/Validation
     dataroot_lq: datasets/MRI/ValLR/AREA
@@ -35,7 +35,7 @@ datasets:
       type: disk
 
   val_2:
-    name: AREA
+    name: NN
     type: PairedImageDataset
     dataroot_gt: datasets/MRI/GT/Validation
     dataroot_lq: datasets/MRI/ValLR/NEAREST
