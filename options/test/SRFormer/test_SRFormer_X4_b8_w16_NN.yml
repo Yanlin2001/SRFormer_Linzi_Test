@@ -1,4 +1,4 @@
-name: test_SRFormer_X4_b16_w16_NN
+name: test_SRFormer_X4_b8_w16_NN
 suffix: ~  # add suffix to saved images
 model_type: SwinIRModel
 scale: 4
@@ -61,7 +61,7 @@ print_network: false
 path:
   strict_load_g: true
   param_key_g: params
-  pretrain_network_g: experiments/train_SRFormer_X4_b16_w16_NN/models/net_g_35000.pth
+  pretrain_network_g: experiments/train_SRFormer_X4_b8_w16_NN/models/net_g_35000.pth
 
 val:
   save_img: true
