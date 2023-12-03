@@ -1,5 +1,5 @@
 # general settings
-name: train_SRFormer_X4_b1_w16_NN
+name: train_SRFormer_X4_b16_w16_NN
 model_type: SwinIRModel
 scale: 4
 num_gpu: auto
@@ -21,7 +21,7 @@ datasets:
 
     use_shuffle: true
     num_worker_per_gpu: 16
-    batch_size_per_gpu: 1
+    batch_size_per_gpu: 16
     dataset_enlarge_ratio: 10
     prefetch_mode: ~
 
